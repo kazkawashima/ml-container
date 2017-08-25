@@ -1,6 +1,6 @@
 # TensorFlow & scikit-learn with Python3.6
 FROM python:3.6
-LABEL maintainer “Shiho ASA<asashiho@mail.asa.yokohama>”
+LABEL maintainer “kazuma<gs2safari'a'gmail.com>”
 
 # Install dependencies
 RUN apt-get update && apt-get install -y \
@@ -40,8 +40,16 @@ RUN pip --no-cache-dir install \
         Pillow \
         h5py \
         google-api-python-client \
+        cloudmlmagic \
         && \
     python -m ipykernel.kernelspec
+
+RUN git clone https://www.github.com/datalogai/recurrentshop.git
+
+RUN cd recurrentshop
+RUN python setup.py install
+RUN cd ..
+RUN pip3 install git+https://github.com/farizrahman4u/seq2seq.git
 
 # Set up Jupyter Notebook config
 ENV CONFIG /root/.jupyter/jupyter_notebook_config.py
