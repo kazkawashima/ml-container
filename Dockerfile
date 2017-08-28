@@ -45,8 +45,8 @@ RUN pip --no-cache-dir install \
     python -m ipykernel.kernelspec
 
 RUN git clone https://www.github.com/datalogai/recurrentshop.git
-RUN pwd
-#RUN cd /recurrentshop
+
+
 WORKDIR recurrentshop
 RUN python ./setup.py install
 RUN cd ..

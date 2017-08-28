@@ -3,6 +3,7 @@
 This contains `Dockerfile`s to make it easy to get up and running with
 TensorFlow and scikit-learn via [Docker](http://www.docker.com/).
 
+original is here.(https://github.com/asashiho/ml-jupyter-python3)
 
 ## 1. Installing Docker
 General installation instructions are
@@ -59,7 +60,9 @@ Windows:
 >- Pillow
 >- h5py
 >- google-api-python-client
-
+>- cloudmlmagic
+>- recurrent shop
+>- seq2seq by farizrahman4u
 
 This container is CPU Only.If you want to use GPU, rebuilding GPU images requires [nvidia-docker](https://github.com/NVIDIA/nvidia-docker).
 
